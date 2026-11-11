@@ -1,0 +1,44 @@
+Select Unit
+Refresh UI when {player} selects {unit}
+
+动作
+    遍历【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 执行动作
+        动作列表
+            设置【{玩家}player】UI控件【{界面控件}当前表遍历到的界面控件值】 的可见性开关为 【{布尔类型}True】
+    遍历【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitHide" 】】指向的表 值。】 执行动作
+        动作列表
+            设置【{玩家}player】UI控件【{界面控件}当前表遍历到的界面控件值】 的可见性开关为 【{布尔类型}False】
+    [Set Primary Unit]Set 【{单位}unit】 as 【{玩家}player】's primary unit
+    模型控件 - 设置【{玩家}player】模型控件【{界面控件}界面控件 model_1】中展示的模型为【{模型类型}获取【{单位}unit】模型】
+    设置变量 【{计时器}t】 为 每隔[【{实数}0.03】]秒，[【{布尔类型}True】立即执行]
+        动作列表
+            条件分支
+                If - 条件
+                    【{单位}unit】存在
+                    【{单位}unit】是存活
+                Then - 动作
+                    设置【{玩家}player】进度条控件【{界面控件}界面控件 exp】当前值为【{整数}获取【{单位}unit】当前的经验值】
+                    设置【{玩家}player】进度条控件【{界面控件}界面控件 exp】的最大值为【{整数}获取【{单位}unit】当前升级所需经验】
+                Else - 动作
+    条件分支
+        If - 条件
+            【{玩家}player】存在自定义键值【{字符串}"ui_exp_comp_update" 】
+        Then - 动作
+            条件分支
+                If - 条件
+                    【{计时器}【{玩家}player】的【{字符串}"ui_exp_comp_update" 】[返回: 计时器]】是否正在运行
+                Then - 动作
+                    删除【{计时器}【{玩家}player】的【{字符串}"ui_exp_comp_update" 】[返回: 计时器]】
+                    自定义值 - 设置【{玩家}player】的自定义键值【{字符串}"ui_exp_comp_update" 】为【{计时器}t】
+                Else - 动作
+                    自定义值 - 设置【{玩家}player】的自定义键值【{字符串}"ui_exp_comp_update" 】为【{计时器}t】
+        Else - 动作
+            自定义值 - 设置【{玩家}player】的自定义键值【{字符串}"ui_exp_comp_update" 】为【{计时器}t】
+    设置【{玩家}player】的控件【{界面控件}界面控件 lv】的【{界面控件属性}界面控件属性 text_bind】属性随【{单位属性}等级】变化而更新小数精度:【{整数}0】
+    条件分支
+        If - 条件
+            【{单位}unit】存在
+            【{单位}unit】是存活
+        Then - 动作
+            设置玩家【{玩家}player】的控件【{界面控件}界面控件 lv】绑定单位【{单位}unit】
+        Else - 动作

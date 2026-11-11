@@ -1,0 +1,344 @@
+{
+    "action": [
+        {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "STRING", 
+                                "按钮事件名", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "云脚本-写入存档"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1836826717000002, 
+            "enable": true
+        }, 
+        {
+            "action_type": "CREATE_UI_COMP_EVENT_EX_EX", 
+            "args_list": [
+                {
+                    "arg_type": 100070, 
+                    "args_list": [
+                        "9977abe8-ae2f-438d-9def-af1a2575d010"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100072, 
+                    "args_list": [
+                        30
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "STRING", 
+                                "按钮事件名", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 2
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1836826717000003, 
+            "enable": true, 
+            "op_arg": [
+                null, 
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        false
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "op_arg_enable": [
+                false, 
+                false
+            ]
+        }, 
+        1165738078
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": true, 
+    "event": [
+        {
+            "args_list": [], 
+            "element_id": 1836826717000001, 
+            "enable": true, 
+            "event_type": "INIT_FINISHED"
+        }
+    ], 
+    "group_id": "kBIrbSdWEfGsLHkW-VA4bW", 
+    "p_trigger_id": null, 
+    "sub_trigger": {
+        "1165738078": {
+            "action": [
+                [
+                    1861685963, 
+                    "推荐将事件的来源客户端作为参数传递到云脚本", 
+                    1165738078, 
+                    "action_type"
+                ], 
+                [
+                    1958470297, 
+                    "由于同步机制，同步触发的逻辑在触发时会从每个客户端都发送一份，这会导致事件在云脚本被多次执行", 
+                    1165738078, 
+                    "action_type"
+                ], 
+                [
+                    2087634262, 
+                    "也可以通过在发送时做额外的筛选，防止云脚本收到多个客户端的事件而重复执行", 
+                    1165738078, 
+                    "action_type"
+                ], 
+                {
+                    "action_type": "SET_VARIABLE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100030, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [], 
+                            "sub_type": "GET_NEW_TABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1165738078000002, 
+                    "enable": true
+                }, 
+                [
+                    2022255956, 
+                    "注意：传递给云脚本的参数表，内部仅能使用基本的数据类型：整数/浮点数、布尔值、字符串、表；传入其他数据类型会导致发送时序列化错误", 
+                    1165738078, 
+                    "action_type"
+                ], 
+                {
+                    "action_type": "SET_TABLE_VALUE_1D", 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "player"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }
+                            ], 
+                            "sub_type": "PLAYER_ID_NUMBER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1165738078000003, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "SET_TABLE_VALUE_1D", 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "content"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }, 
+                                {
+                                    "arg_type": 100070, 
+                                    "args_list": [
+                                        "9f8f0c80-d9a9-4196-b2ab-2171dac41d1e"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "sub_type": "GET_INPUT_FIELD_CONTENT"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1165738078685966, 
+                    "enable": true
+                }, 
+                [
+                    1802462548, 
+                    "存档额外需要注意：运行时这些内容的更改不会立刻落盘保存，而是要等到房间关闭后才会保存落盘，测试时需要注意这一点", 
+                    1165738078, 
+                    "action_type"
+                ], 
+                {
+                    "action_type": "SEND_MLSCRIPT_MSG", 
+                    "args_list": [
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "WriteArchive"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1165738078000004, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100067, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "STRING", 
+                                                "按钮事件名", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }
+                            ], 
+                            "sub_type": "STR_TO_UI_EVENT"
+                        }
+                    ], 
+                    "element_id": 1165738078000001, 
+                    "enable": true, 
+                    "event_type": "TRIGGER_COMPONENT_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 1836826717, 
+            "trigger_id": 1165738078, 
+            "trigger_name": "触发逻辑_17", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "NEW_TIMER": {}, 
+                    "TABLE": {
+                        "传参表": null
+                    }
+                }, 
+                {
+                    "传参表": 0
+                }, 
+                [
+                    "传参表"
+                ]
+            ]
+        }
+    }, 
+    "trigger_id": 1836826717, 
+    "trigger_name": "写入存档", 
+    "valid": true, 
+    "var_data": [
+        {
+            "STRING": {
+                "按钮事件名": ""
+            }
+        }, 
+        {
+            "按钮事件名": 0
+        }, 
+        [
+            "按钮事件名"
+        ]
+    ]
+}

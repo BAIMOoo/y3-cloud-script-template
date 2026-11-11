@@ -1,0 +1,16 @@
+Display Notice
+Display notice {info} to {player} for {time} seconds
+
+动作
+    设置【{玩家}player】UI控件【{界面控件}界面控件 error_text】 的可见性开关为 【{布尔类型}True】
+    设置【{玩家}player】控件【{界面控件}界面控件 error_text】当前文本为【{字符串}info】
+    设置变量 【{计时器}t】 为 等待[【{实数}time】]秒，执行动作
+        动作列表
+            设置【{玩家}player】UI控件【{界面控件}界面控件 error_text】 的可见性开关为 【{布尔类型}False】
+    条件分支
+        If - 条件
+            【{计时器}【{玩家}player】的【{字符串}"error_text_timer" 】[返回: 计时器]】存在
+        Then - 动作
+            删除【{计时器}【{玩家}player】的【{字符串}"error_text_timer" 】[返回: 计时器]】
+        Else - 动作
+    自定义值 - 设置【{玩家}player】的自定义键值【{字符串}"error_text_timer" 】为【{计时器}t】

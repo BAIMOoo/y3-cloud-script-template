@@ -1,0 +1,6 @@
+{
+	"Lua.runtime.unicodeName": true,
+	"Lua.diagnostics.neededFileStatus": {
+		"await-in-sync": "Any"
+	}
+}

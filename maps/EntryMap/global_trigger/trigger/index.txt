@@ -1,0 +1,6 @@
+{
+    "New trigger.json": 0, 
+    "UI.folder": 1, 
+    "测试基础.folder": 2, 
+    "测试用例.folder": 3
+}

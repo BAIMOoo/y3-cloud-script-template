@@ -1,0 +1,24 @@
+# 本地运行产物
+cloud_script/mls_log/
+cloud_script/script_log/
+cloud_script/mls_archive/
+cloud_script/dump/
+lock/
+archive/
+*.log
+
+# 内部 AI / 工具目录
+.codex/
+.y3maker/
+.omc/
+.omx/
+
+# 编辑器生成或由编辑器提供的缓存
+ui_tree/
+maps/EntryMap/script/y3/
+maps/EntryMap/script/log/
+maps/EntryMap/script/.log/
+
+# 系统文件
+.DS_Store
+Thumbs.db

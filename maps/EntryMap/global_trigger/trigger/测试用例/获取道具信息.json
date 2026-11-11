@@ -1,0 +1,404 @@
+{
+    "action": [
+        {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "STRING", 
+                                "按钮事件名", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "云脚本-获取道具信息"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 171593815000002, 
+            "enable": true
+        }, 
+        {
+            "action_type": "CREATE_UI_COMP_EVENT_EX_EX", 
+            "args_list": [
+                {
+                    "arg_type": 100070, 
+                    "args_list": [
+                        "3e985144-5a27-40af-8478-c582f10cf281"
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100072, 
+                    "args_list": [
+                        30
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "STRING", 
+                                "按钮事件名", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 2
+                }
+            ], 
+            "bp": false, 
+            "element_id": 171593815000003, 
+            "enable": true, 
+            "op_arg": [
+                null, 
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        false
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "op_arg_enable": [
+                false, 
+                false
+            ]
+        }, 
+        [
+            1923211776, 
+            "平台道具功能入口：发布-平台道具配置", 
+            171593815, 
+            "action_type"
+        ], 
+        [
+            1231135594, 
+            "调试时，可以通过此窗口左下角的【本地调试配置】修改玩家的拥有道具信息", 
+            171593815, 
+            "action_type"
+        ], 
+        [
+            1536375346, 
+            "对于消耗型道具，表格中的数值为剩余数量；对于时限性，表格中的数值为到期的剩余时间，以游戏开始运行时计时，单位为分钟", 
+            171593815, 
+            "action_type"
+        ], 
+        1933201496
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": true, 
+    "event": [
+        {
+            "args_list": [], 
+            "element_id": 171593815000001, 
+            "enable": true, 
+            "event_type": "INIT_FINISHED"
+        }
+    ], 
+    "group_id": "kBIrbSdWEfGsLHkW-VA4bW", 
+    "p_trigger_id": null, 
+    "sub_trigger": {
+        "1933201496": {
+            "action": [
+                [
+                    1861685963, 
+                    "推荐将事件的来源客户端作为参数传递到云脚本", 
+                    1933201496, 
+                    "action_type"
+                ], 
+                [
+                    1958470297, 
+                    "由于同步机制，同步触发的逻辑在触发时会从每个客户端都发送一份，这会导致事件在云脚本被多次执行", 
+                    1933201496, 
+                    "action_type"
+                ], 
+                [
+                    2087634262, 
+                    "也可以通过在发送时做额外的筛选，防止云脚本收到多个客户端的事件而重复执行", 
+                    1933201496, 
+                    "action_type"
+                ], 
+                {
+                    "action_type": "SET_VARIABLE", 
+                    "args_list": [
+                        {
+                            "arg_type": 100030, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [], 
+                            "sub_type": "GET_NEW_TABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1933201496000002, 
+                    "enable": true
+                }, 
+                [
+                    2022255956, 
+                    "注意：传递给云脚本的参数表，内部仅能使用基本的数据类型：整数/浮点数、布尔值、字符串、表；传入其他数据类型会导致发送时序列化错误", 
+                    1933201496, 
+                    "action_type"
+                ], 
+                {
+                    "action_type": "SET_TABLE_VALUE_1D", 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "player"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100025, 
+                                    "args_list": [], 
+                                    "sub_type": "TRIGGER_PLAYER"
+                                }
+                            ], 
+                            "sub_type": "PLAYER_ID_NUMBER"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1933201496000003, 
+                    "enable": true
+                }, 
+                [
+                    1342917120, 
+                    "输入框输入指定的ID", 
+                    1933201496, 
+                    "action_type"
+                ], 
+                {
+                    "action_type": "SET_TABLE_VALUE_1D", 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "itemID"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                134244591
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1933201496685966, 
+                    "enable": false
+                }, 
+                {
+                    "action_type": "SET_TABLE_VALUE_1D", 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "itemID"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100002, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }, 
+                                        {
+                                            "arg_type": 100070, 
+                                            "args_list": [
+                                                "2ccde657-deeb-4524-9cff-9d3afd5dcc2b"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "GET_INPUT_FIELD_CONTENT"
+                                }
+                            ], 
+                            "sub_type": "STR_TO_INT"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1933201496685982, 
+                    "enable": true
+                }, 
+                {
+                    "action_type": "SEND_MLSCRIPT_MSG", 
+                    "args_list": [
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "MsGetPlayerItem"
+                            ], 
+                            "sub_type": 1
+                        }, 
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "TABLE", 
+                                        "传参表", 
+                                        "local"
+                                    ]
+                                }
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1933201496000004, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100067, 
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "__tuple__": true, 
+                                            "items": [
+                                                "STRING", 
+                                                "按钮事件名", 
+                                                "local"
+                                            ]
+                                        }
+                                    ], 
+                                    "sub_type": 2
+                                }
+                            ], 
+                            "sub_type": "STR_TO_UI_EVENT"
+                        }
+                    ], 
+                    "element_id": 1933201496000001, 
+                    "enable": true, 
+                    "event_type": "TRIGGER_COMPONENT_EVENT"
+                }
+            ], 
+            "group_id": 0, 
+            "is_conf": true, 
+            "p_trigger_id": 171593815, 
+            "trigger_id": 1933201496, 
+            "trigger_name": "触发逻辑_14", 
+            "valid": true, 
+            "var_data": [
+                {
+                    "NEW_TIMER": {}, 
+                    "TABLE": {
+                        "传参表": null
+                    }
+                }, 
+                {
+                    "传参表": 0
+                }, 
+                [
+                    "传参表"
+                ]
+            ]
+        }
+    }, 
+    "trigger_id": 171593815, 
+    "trigger_name": "获取道具信息", 
+    "valid": true, 
+    "var_data": [
+        {
+            "STRING": {
+                "按钮事件名": ""
+            }
+        }, 
+        {
+            "按钮事件名": 0
+        }, 
+        [
+            "按钮事件名"
+        ]
+    ]
+}

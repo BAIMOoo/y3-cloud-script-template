@@ -1,0 +1,129 @@
+{
+    "action": [
+        [
+            1024331365, 
+            "调试使用，将来自云脚本的mslog事件的内容输出到聊天框和日志中", 
+            1845866551, 
+            "action_type"
+        ], 
+        {
+            "action_type": "DISPLAY_INFO_TO_PLAYER", 
+            "args_list": [
+                {
+                    "arg_type": 100025, 
+                    "args_list": [], 
+                    "sub_type": "TRIGGER_PLAYER"
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [], 
+                            "sub_type": "GET_MLSCRIPT_EVENT_DATA_FROM_EVENT"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "msg"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_STRING_TABLE_VAR_1D"
+                }, 
+                {
+                    "arg_type": 100001, 
+                    "args_list": [
+                        false
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1845866551000066, 
+            "enable": true
+        }, 
+        {
+            "action_type": "PRINT_MESSAGE_ACTION_TO_DIALOG", 
+            "args_list": [
+                {
+                    "arg_type": 100175, 
+                    "args_list": [
+                        3
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        {
+                            "arg_type": 100011, 
+                            "args_list": [], 
+                            "sub_type": "GET_MLSCRIPT_EVENT_DATA_FROM_EVENT"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "msg"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "GET_STRING_TABLE_VAR_1D"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1845866551000134, 
+            "enable": true
+        }
+    ], 
+    "call_enabled": true, 
+    "condition": [
+        {
+            "args_list": [
+                {
+                    "arg_type": 100003, 
+                    "args_list": [], 
+                    "sub_type": "GET_MLSCRIPT_EVENT_NAME_FROM_EVENT"
+                }, 
+                {
+                    "arg_type": 100035, 
+                    "args_list": [
+                        "=="
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "mslog"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "condition_type": "STRING_COMPARE", 
+            "element_id": 1845866551000005, 
+            "enable": true
+        }
+    ], 
+    "enabled": true, 
+    "event": [
+        {
+            "args_list": [], 
+            "element_id": 1845866551000002, 
+            "enable": true, 
+            "event_type": "ON_MLS_SCRIPT_EVENT"
+        }
+    ], 
+    "group_id": "j44-LRhBEfGYKeN6D1xWFD", 
+    "p_trigger_id": null, 
+    "trigger_id": 1845866551, 
+    "trigger_name": "打印数据_mslog", 
+    "valid": true, 
+    "var_data": [
+        {}, 
+        {}, 
+        []
+    ]
+}

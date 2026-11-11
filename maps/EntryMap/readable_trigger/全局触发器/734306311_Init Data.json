@@ -1,0 +1,64 @@
+事件
+    游戏初始化
+条件
+动作
+    变量 - 设置全局变量【{非数组变量}GLOBAL_BAG_MAX_NUM】为【{整数}180】
+    变量 - 设置全局变量【{非数组变量}UI_Manager】为【{表 }新的空表】
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectSingleUnitShow" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 attr_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit_name】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 bag_btn】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 skill_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 inventory】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_hp_bar】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_mp_bar】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectSingleUnitHide" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 unit_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 item】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectSingleUnitHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 Destructible】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectMutiUnitShow" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 unit_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 attr_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit_name】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 bag_btn】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 skill_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 inventory】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectMutiUnitHide" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 item】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectMutiUnitHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 Destructible】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectItemShow" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 item】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit_name】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectItemHide" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 unit_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 Destructible】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 attr_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 bag_btn】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 skill_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 inventory】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 bag】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 store】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_hp_bar】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectItemHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_mp_bar】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectDestructibleShow" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 Destructible】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleShow" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit_name】 
+    设置一维表 【{表 }UI_Manager】中索引为 【【{字符串}"SelectDestructibleHide" 】】的值为 【{表 }新的空表】
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_unit】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 unit_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 item】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 attr_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 bag_btn】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 skill_list】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 inventory】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 bag】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 store】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_hp_bar】 
+    向表 【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 中插入 【{界面控件}界面控件 main_mp_bar】 

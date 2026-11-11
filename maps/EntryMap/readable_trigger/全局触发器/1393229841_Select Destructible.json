@@ -1,0 +1,24 @@
+Select Destructible
+Refresh UI when {player} selects {destructible}
+
+动作
+    遍历【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleShow" 】】指向的表 值。】 执行动作
+        动作列表
+            设置【{玩家}player】UI控件【{界面控件}当前表遍历到的界面控件值】 的可见性开关为 【{布尔类型}True】
+    遍历【{表 }表 【{表 }UI_Manager】中，由索引【【{字符串}"SelectDestructibleHide" 】】指向的表 值。】 执行动作
+        动作列表
+            设置【{玩家}player】UI控件【{界面控件}当前表遍历到的界面控件值】 的可见性开关为 【{布尔类型}False】
+    模型控件 - 设置【{玩家}player】模型控件【{界面控件}界面控件 model_1】中展示的模型为【{模型类型}获取【{可破坏物}destructible】的模型】
+    设置【{玩家}player】控件【{界面控件}界面控件 des】当前文本为【{字符串}获取【{可破坏物}destructible】物描述】
+    设置【{玩家}player】控件【{界面控件}界面控件 main_unit_name】当前文本为【{字符串}获取【{可破坏物}destructible】的名称】
+    设置【{玩家}player】控件【{界面控件}界面控件 main_unit_name】当前文本为【{字符串}获取【{可破坏物}destructible】的名称】
+    变量 - 设置局部变量【{动态触发器}t1】为【{动态触发器}动态注册【{触发器}t1_2】】
+        事件
+            指定【{可破坏物}destructible】【{可破坏物触发器事件}可破坏物死亡】
+            指定【{可破坏物}destructible】【{可破坏物触发器事件}可破坏物被采集】
+        条件
+            【{可破坏物}事件中的可破坏物】【{判断符}等于】【{可破坏物}destructible】
+        动作
+            设置【{玩家}player】UI控件【{界面控件}界面控件 main】 的可见性开关为 【{布尔类型}False】
+            注销【{动态触发器}t1】
+            注销【{动态触发器}t2】
