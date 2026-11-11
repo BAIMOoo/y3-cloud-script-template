@@ -7,17 +7,19 @@ lock/
 archive/
 *.log
 
-# 内部 AI / 工具目录
-.codex/
+# 内部工具目录
 .y3maker/
 .omc/
 .omx/
 
 # 编辑器生成或由编辑器提供的缓存
 ui_tree/
-maps/EntryMap/script/y3/
 maps/EntryMap/script/log/
 maps/EntryMap/script/.log/
+
+# Y3 Lua 框架的原始 git 历史备份与内部 AI 工具
+maps/EntryMap/script/y3/.git.y3-lualib-backup/
+maps/EntryMap/script/y3/.codemaker/
 
 # 系统文件
 .DS_Store

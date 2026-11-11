@@ -10,6 +10,7 @@
   - `testcase/`：调用示例、开发者自检和游戏内 Demo 事件
   - `云脚本教程.md`：接口与使用说明
 - `maps/EntryMap/`：示例地图工程
+- `maps/EntryMap/script/y3/`：随模板附带的 Y3 Lua 框架，来自上游 `y3-editor/y3-lualib`，保留其 `LICENSE`
 - `maps/EntryMap/script/可重载的代码.lua`：客户端 Lua 示例和游戏内 Demo 按钮绑定
 
 ## 使用方式
@@ -25,6 +26,7 @@
 
 ## 注意事项
 
-- `maps/EntryMap/script/y3/` 是编辑器提供的 Y3 Lua 框架目录，本仓库不包含，避免与上游框架版本耦合。
+- `maps/EntryMap/script/y3/` 已随模板附带，clone 后可直接运行；框架来源为 `y3-editor/y3-lualib`，请遵循其 `LICENSE`。
+- `.codex/` 为 Y3 开发助手配置与技能目录，已同步到 `y3-editor/y3-maker-config` 最新版本。
 - `cloud_script/mls_log/`、`cloud_script/script_log/`、`cloud_script/mls_archive/` 是本地运行产物，不会提交。
 - 如果本地 MockMls 或游戏包版本较旧，新接口可能提示“未开放”，请更新本地云脚本运行环境。
